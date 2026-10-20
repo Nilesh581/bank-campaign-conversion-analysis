@@ -18,14 +18,15 @@ A bank marketing team wants to understand which customer groups responded to his
 - Subscription rates vary across campaign-contact count groups, but the data does not show that extra contacts caused the difference.
 
 ## Dashboard
-Open `dashboard.html` in a browser. Click the tabs to compare conversion by job, contact type, and campaign contact count. The dashboard is self-contained.
+![Bank campaign dashboard preview](dashboard-preview.png)
+
+[Open the interactive dashboard](https://nilesh581.github.io/bank-campaign-conversion-analysis/dashboard.html). Click the tabs to compare conversion by job, contact type, and campaign contact count. The dashboard is self-contained; the source file is `dashboard.html`.
 
 ## Methods and limitations
-Analysis uses SQL and Python for data preparation and segment comparisons. These are historical observational records, not evidence of current customer behavior or causal effects. Call duration is only known after a call and is not appropriate as a pre-call targeting feature. The data does not include campaign cost or profit.
+The included Python script uses pandas for data preparation and segment comparisons. These are historical observational records, not evidence of current customer behavior or causal effects. Call duration is only known after a call and is not appropriate as a pre-call targeting feature. The data does not include campaign cost or profit.
 
 ## Resume bullet
-Analyzed 45,211 historical bank campaign records with SQL and Python; measured an 11.7% overall subscription rate, compared conversion across customer and contact segments, and built an interactive performance dashboard.
+Analyzed 45,211 historical bank campaign records with Python and pandas; measured an 11.7% overall subscription rate, compared conversion across customer and contact segments, and built an interactive performance dashboard.
 
 ## Rebuild the dashboard
-
 Install the dependencies with `python -m pip install pandas openpyxl`, then run `python build_dashboard.py` from this folder. The script reads the included dataset and regenerates `dashboard.html`. (The churn and bank projects only require pandas; openpyxl is needed for the retail Excel dataset.)
